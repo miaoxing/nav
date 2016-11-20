@@ -38,16 +38,16 @@ class Plugin extends \miaoxing\plugin\BasePlugin
                 'display',
                 'side',
                 'icons',
-                'sub-links'
-            ]
+                'sub-links',
+            ],
         ];
 
         $types['footer'] = [
             'name' => '底部导航',
             'scope' => 'page',
             'supports' => [
-                'icons'
-            ]
+                'icons',
+            ],
         ];
     }
 

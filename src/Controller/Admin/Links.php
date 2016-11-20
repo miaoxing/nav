@@ -18,12 +18,12 @@ class Links extends \miaoxing\plugin\BaseController
         $nav = wei()->nav()->curApp()->findOneById($req['navId']);
 
         switch ($req['_format']) {
-            case 'json' :
+            case 'json':
                 $links = wei()->navLink();
 
                 $links->where([
                     'navId' => $nav['id'],
-                    'parentId' => '0'
+                    'parentId' => '0',
                 ]);
 
                 // 分页
@@ -98,7 +98,6 @@ class Links extends \miaoxing\plugin\BaseController
 
         return $this->suc();
     }
-
 
     public function destroyAction($req)
     {

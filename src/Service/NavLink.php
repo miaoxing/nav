@@ -30,7 +30,7 @@ class NavLink extends \miaoxing\plugin\BaseModel
     protected $parentLink;
 
     protected $providers = [
-        'db' => 'app.db'
+        'db' => 'app.db',
     ];
 
     /**
@@ -43,25 +43,29 @@ class NavLink extends \miaoxing\plugin\BaseModel
 
     public function getSubLinks()
     {
-         $this->subLinks || $this->subLinks = wei()->navLink()->desc('sort')->findAll(['parentId' => $this['id']]);
-         return $this->subLinks;
+        $this->subLinks || $this->subLinks = wei()->navLink()->desc('sort')->findAll(['parentId' => $this['id']]);
+
+        return $this->subLinks;
     }
 
     public function getParentLink()
     {
         $this->parentLink || $this->parentLink = wei()->navLink()->findOrInitById($this['parentId']);
+
         return $this->parentLink;
     }
 
     public function displayIcon($link)
     {
         $link || $link = $this;
+
         return in_array($link['display'], ['icon', 'all']);
     }
 
     public function displayText($link)
     {
         $link || $link = $this;
+
         return in_array($link['display'], ['text', 'all']);
     }
 

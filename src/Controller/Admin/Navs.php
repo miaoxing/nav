@@ -16,7 +16,7 @@ class Navs extends \miaoxing\plugin\BaseController
     public function indexAction($req)
     {
         switch ($req['_format']) {
-            case 'json' :
+            case 'json':
                 $data = [];
 
                 $types = wei()->nav->getTypes();
@@ -26,7 +26,7 @@ class Navs extends \miaoxing\plugin\BaseController
                     $nav = wei()->nav()->curApp()->findOrInit(['type' => $key]);
                     if ($nav->isNew()) {
                         $nav->setAppId()->save([
-                            'enable' => false
+                            'enable' => false,
                         ]);
                     }
 
