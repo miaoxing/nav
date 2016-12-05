@@ -4,7 +4,7 @@ define([], function () {
   };
 
   $.extend(Navs.prototype, {
-    $el: $('#navsForm'),
+    $el: $('#navs-form'),
     data: [],
     $: function (selector) {
       return this.$el.find(selector);
@@ -30,7 +30,7 @@ define([], function () {
         })
         .validate();
 
-      this.$('#color, #activeColor, #bgColor').spectrum();
+      this.$('#color, #active-color, #bg-color').spectrum();
     }
   });
 

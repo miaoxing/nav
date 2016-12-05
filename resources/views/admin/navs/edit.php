@@ -56,7 +56,7 @@
 <?= $block('js') ?>
 <script>
   require([
-    'plugins/nav/assets/admin/navs',
+    'plugins/nav/js/admin/navs',
     'linkTo',
     'assets/spectrum',
     'validator',
