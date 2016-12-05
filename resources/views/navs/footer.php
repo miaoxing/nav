@@ -1,4 +1,5 @@
 <?= $block('css') ?>
+<!-- htmllint tag-bans="false" -->
 <style>
   body, .ui-page {
     padding-bottom: 50px;
@@ -19,6 +20,7 @@
     bottom: 50px; /* TODO */
   }
 </style>
+<!-- htmllint tag-bans="$previous" -->
 <?= $block->end() ?>
 
 <nav class="nav-footer border-top flex flex-center">

@@ -1,5 +1,6 @@
 <?php $nav = wei()->nav()->curApp()->enabled()->find(['type' => 'word']); ?>
 <?= $block('css') ?>
+<!-- htmllint tag-bans="false" -->
 <style type="text/css">
   .nav-word {
     background-color: <?= $nav['bgColor'] ?>;
@@ -15,28 +16,28 @@
   }
 
   /* 本例子css */
-  .txtMarquee-left {
+  .txt-marquee-left {
     width: 100%;
     position: relative;
     border: 1px solid #ccc;
   }
 
-  .txtMarquee-left .bd .tempWrap {
+  .txt-marquee-left .bd .tempWrap {
     width: 100% !important;
   }
 
-  .txtMarquee-left .bd {
+  .txt-marquee-left .bd {
     padding: 5px 10px;
   }
 
   /* 用 !important覆盖SuperSlide自动生成的宽度，这样就可以手动控制可视宽度。 */
-  .txtMarquee-left .bd ul {
+  .txt-marquee-left .bd ul {
     overflow: hidden;
     width: 9000px !important;
     zoom: 1;
   }
 
-  .txtMarquee-left .bd ul li {
+  .txt-marquee-left .bd ul li {
     margin-right: 20px;
     float: left;
     height: 24px;
@@ -48,17 +49,18 @@
   }
 
   /* 用 width:auto !important 覆盖SuperSlide自动生成的宽度，解决文字不衔接问题 */
-  .txtMarquee-left .bd ul li span {
+  .txt-marquee-left .bd ul li span {
     color: #999;
   }
 </style>
+<!-- htmllint tag-bans="$previous" -->
 <?= $block->end() ?>
 
 <?php $links = $nav ? $nav->getLinks() : ''; ?>
 <?php if ($links && $links->count() > 0) : ?>
-  <div class="txtMarquee-left nav-word">
+  <div class="txt-marquee-left nav-word js-txt-marquee">
     <div class="bd">
-      <ul class="infoList">
+      <ul class="info-list">
         <?php foreach ($links as $link) : ?>
           <li>
             <a href="<?= wei()->linkTo->getUrl($link['linkTo']) ?: 'javascript:;' ?>">
@@ -74,7 +76,7 @@
 <?= $block('js') ?>
 <script>
   require(['comps/superSlide/jquery.SuperSlide.2.1.1'], function (linkTo) {
-    $(".txtMarquee-left").slide({
+    $(".js-txt-marquee").slide({
       mainCell: ".bd ul",
       autoPlay: true,
       defaultPlay: false,

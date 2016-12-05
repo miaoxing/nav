@@ -1,4 +1,19 @@
-<?php foreach ($links as $link) : ?>
+<?= $block('css') ?>
+<!-- htmllint tag-bans="false" -->
+<style>
+  <?php foreach ($links as $i => $link) : ?>
+  .icon-bg-<?= $i ?> {
+    <?= $link['bgColor'] ? ('background-color:' . $link['bgColor']) : '' ?>;
+  }
+  <?php endforeach; ?>
+</style>
+<!-- htmllint tag-bans="$previous" -->
+<?= $block->end() ?>
+
+<!-- htmllint preset="none" -->
+<!-- htmllint tag-name-match="false" -->
+
+<?php foreach ($links as $i => $link) : ?>
   <?php if ($link->isDivider()) : ?>
     <li class="list-divider"></li>
   <?php else : ?>
@@ -8,13 +23,12 @@
           <?php if ($link['icon'] == 'image') : ?>
             <img class="list-icon" src="<?= $link['image'] ?>">
           <?php elseif ($link['icon'] == 'font') : ?>
-            <i class="list-icon <?= $link['font'] ?>"
-              style="<?= $link['bgColor'] ? ('background-color:' . $link['bgColor']) : '' ?>">
+            <i class="list-icon <?= $link['font'] ?> <?= 'icon-bg-' . $i; ?>">
             </i>
           <?php else : ?>
-            <i class="list-icon iconfont"
-              style="<?= $link['bgColor'] ? ('background-color:' . $link['bgColor']) : '' ?>">
-              <?= $link['customFont'] ?></i>
+            <i class="list-icon iconfont <?= 'icon-bg-' . $i; ?>">
+              <?= $link['customFont'] ?>
+            </i>
           <?php endif ?>
         </div>
         <div class="list-col list-middle">

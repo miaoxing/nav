@@ -1,4 +1,5 @@
 <?= $block('css') ?>
+<!-- htmllint tag-bans="false" -->
 <style>
   #hm-nav-<?= $nav['id'] ?> {
     background-color: <?= $nav['bgColor'] ?>;
@@ -8,6 +9,7 @@
     color: <?= $nav['color'] ?> !important; /* jqm */
   }
 </style>
+<!-- htmllint tag-bans="$previous" -->
 <?= $block->end() ?>
 
 <nav class="hm-nav" id="hm-nav-<?= $nav['id'] ?>">
