@@ -33,7 +33,7 @@ class Nav extends \miaoxing\plugin\BaseModel
     {
         $this->links || $this->links = wei()->navLink()->desc('sort')->findAll([
             'navId' => $this['id'],
-            'parentId' => '0'
+            'parentId' => '0',
         ]);
 
         return $this->links;
@@ -78,7 +78,7 @@ class Nav extends \miaoxing\plugin\BaseModel
                         'bgColor',
                         'side',
                         'display',
-                        'linkTo'
+                        'linkTo',
                     ]) + [
                         'subLinks' => $link->getSubLinks()->toArray(['name', 'linkTo']),
                     ];
