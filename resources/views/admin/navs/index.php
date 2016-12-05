@@ -15,9 +15,9 @@
         <thead>
         <tr>
           <th>类型</th>
-          <th style="width: 120px">启用</th>
-          <th style="width: 120px">管理链接</th>
-          <th style="width: 120px">操作</th>
+          <th class="t-6">启用</th>
+          <th class="t-7">管理链接</th>
+          <th class="t-10">操作</th>
         </tr>
         </thead>
         <tbody>

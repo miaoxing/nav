@@ -31,7 +31,10 @@ class Nav extends \miaoxing\plugin\BaseModel
 
     public function getLinks()
     {
-        $this->links || $this->links = wei()->navLink()->desc('sort')->findAll(['navId' => $this['id'], 'parentId' => '0']);
+        $this->links || $this->links = wei()->navLink()->desc('sort')->findAll([
+            'navId' => $this['id'],
+            'parentId' => '0'
+        ]);
 
         return $this->links;
     }
@@ -64,7 +67,19 @@ class Nav extends \miaoxing\plugin\BaseModel
             $links = [];
             /** @var NavLink $link */
             foreach ($nav->getLinks() as $link) {
-                $links[] = $link->toArray(['type', 'name', 'icon', 'image', 'activeImage', 'font', 'customFont', 'bgColor', 'side', 'display', 'linkTo']) + [
+                $links[] = $link->toArray([
+                        'type',
+                        'name',
+                        'icon',
+                        'image',
+                        'activeImage',
+                        'font',
+                        'customFont',
+                        'bgColor',
+                        'side',
+                        'display',
+                        'linkTo'
+                    ]) + [
                         'subLinks' => $link->getSubLinks()->toArray(['name', 'linkTo']),
                     ];
             }
@@ -120,7 +135,8 @@ class Nav extends \miaoxing\plugin\BaseModel
 
         /** @var NavLink $link */
         foreach ($links as $link) {
-            $html .= '<a href="' . ($link['subLinks'] ? 'javascript:;' : $this->linkTo->getUrl($link['linkTo'])) . '" class="hm-nav-link flex flex-center">';
+            $url = $link['subLinks'] ? 'javascript:;' : $this->linkTo->getUrl($link['linkTo']);
+            $html .= '<a href="' . $url . '" class="hm-nav-link flex flex-center">';
 
             // 显示图标
             if ($navLink->displayIcon($link)) {
@@ -144,7 +160,8 @@ class Nav extends \miaoxing\plugin\BaseModel
             if ($link['subLinks']) {
                 $html .= '<dl class="hm-nav-menu">';
                 foreach ($link['subLinks'] as $subLink) {
-                    $html .= '<dd><a href="' . $this->linkTo->getUrl($subLink['linkTo']) . '">' . $subLink['name'] . '</a></dd>';
+                    $html .= '<dd><a href="' . $this->linkTo->getUrl($subLink['linkTo']) . '">';
+                    $html .= $subLink['name'] . '</a></dd>';
                 }
                 $html .= '</dl>';
             }
@@ -214,7 +231,7 @@ class Nav extends \miaoxing\plugin\BaseModel
         $links = [];
         foreach ($nav['links'] as $link) {
             $links[] = $link + [
-                'url' => $this->linkTo->getUrl($link['linkTo']),
+                    'url' => $this->linkTo->getUrl($link['linkTo']),
                 ];
         }
 

@@ -25,10 +25,10 @@
           <th>名称</th>
           <th>链接到</th>
           <?php if (in_array('side', $type['supports'])) : ?>
-          <th style="width: 120px">位置</th>
+            <th class="t-6">位置</th>
           <?php endif ?>
-          <th style="width: 120px">顺序</th>
-          <th style="width: 120px">操作</th>
+          <th class="t-6">顺序</th>
+          <th class="t-10">操作</th>
         </tr>
         </thead>
         <tbody>
@@ -54,8 +54,8 @@
       columns: [
         {
           data: 'name',
-          render: function(data, type, full) {
-            if(full.type == '2') {
+          render: function (data, type, full) {
+            if (full.type == '2') {
               return '--分隔线--';
             }
 
@@ -68,7 +68,7 @@
         },
         {
           data: 'linkTo',
-          render: function(data, type, full) {
+          render: function (data, type, full) {
             return linkTo.renderLink(data, full.url);
           }
         },
@@ -76,7 +76,7 @@
         {
           data: 'side',
           sClass: 'text-center',
-          render: function(data, type, full) {
+          render: function (data, type, full) {
             return template.render('side-col-tpl', full);
           }
         },
@@ -102,9 +102,9 @@
 
 <script id="side-col-tpl" type="text/html">
   <% if (parentId == '0' && side != '') { %>
-    <span class="badge badge-<%= side == 'left' ? 'success' : 'warning' %>"><%= side == 'left' ? '左边' : '右边' %></span>
+  <span class="badge badge-<%= side == 'left' ? 'success' : 'warning' %>"><%= side == 'left' ? '左边' : '右边' %></span>
   <% } else { %>
-    -
+  -
   <% } %>
 </script>
 
@@ -112,15 +112,16 @@
   <div class="action-buttons">
     <?php if (in_array('sub-links', $type['supports'])) : ?>
       <% if (parentId == '0') { %>
-        <a href="<%= $.url('admin/navs/%s/links/new', navId, {parentId: id}) %>" title="添加子链接">
-          <i class="fa fa-plus bigger-130"></i>
-        </a>
+      <a href="<%= $.url('admin/navs/%s/links/new', navId, {parentId: id}) %>" title="添加子链接">
+        <i class="fa fa-plus bigger-130"></i>
+      </a>
       <% } %>
     <?php endif ?>
     <a href="<%= $.url('admin/links/%s/edit', id) %>" title="编辑">
       <i class="fa fa-edit bigger-130"></i>
     </a>
-    <a class="text-danger delete-record" href="javascript:;" data-href="<%= $.url('admin/links/%s?_method=delete', id) %>" title="删除">
+    <a class="text-danger delete-record" href="javascript:;"
+      data-href="<%= $.url('admin/links/%s?_method=delete', id) %>" title="删除">
       <i class="fa fa-trash-o bigger-130"></i>
     </a>
   </div>

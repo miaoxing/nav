@@ -1,3 +1,4 @@
+<?= $block('css') ?>
 <style>
   body, .ui-page {
     padding-bottom: 50px;
@@ -18,6 +19,7 @@
     bottom: 50px; /* TODO */
   }
 </style>
+<?= $block->end() ?>
 
 <nav class="nav-footer border-top flex flex-center">
   <?php foreach ($links as $link) : ?>

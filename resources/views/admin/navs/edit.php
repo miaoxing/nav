@@ -9,7 +9,7 @@
 
 <div class="row">
   <div class="col-xs-12">
-    <form class="form-horizontal" id="navsForm" role="form" method="post">
+    <form class="form-horizontal" id="navs-form" role="form" method="post">
       <div class="form-group">
         <label for="color" class="col-sm-2 control-label">文字颜色</label>
 
@@ -19,18 +19,18 @@
       </div>
 
       <div class="form-group">
-        <label for="activeColor" class="col-sm-2 control-label">文字激活时颜色</label>
+        <label for="active-color" class="col-sm-2 control-label">文字激活时颜色</label>
 
         <div class="col-sm-4">
-          <input type="text" class="form-control" name="activeColor" id="activeColor">
+          <input type="text" class="form-control" name="activeColor" id="active-color">
         </div>
       </div>
 
       <div class="form-group">
-        <label for="bgColor" class="col-sm-2 control-label">背景颜色</label>
+        <label for="bg-color" class="col-sm-2 control-label">背景颜色</label>
 
         <div class="col-sm-4">
-          <input type="text" class="form-control" name="bgColor" id="bgColor" data-rule-required="true">
+          <input type="text" class="form-control" name="bgColor" id="bg-color" data-rule-required="true">
         </div>
       </div>
 

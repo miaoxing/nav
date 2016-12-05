@@ -1,4 +1,5 @@
 <?php $nav = wei()->nav()->curApp()->enabled()->find(['type' => 'word']); ?>
+<?= $block('css') ?>
 <style type="text/css">
   .nav-word {
     background-color: <?= $nav['bgColor'] ?>;
@@ -51,6 +52,7 @@
     color: #999;
   }
 </style>
+<?= $block->end() ?>
 
 <?php $links = $nav ? $nav->getLinks() : ''; ?>
 <?php if ($links && $links->count() > 0) : ?>

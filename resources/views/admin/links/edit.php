@@ -9,18 +9,18 @@
 
 <div class="row">
   <div class="col-xs-12">
-    <form class="form-horizontal" id="linksForm" role="form" method="post">
+    <form class="form-horizontal" id="links-form" role="form" method="post">
       <?php if ($link['parentId']) : ?>
-      <div class="form-group">
-        <label class="col-lg-2 control-label" for="parentId">
-          父链接
-        </label>
+        <div class="form-group">
+          <label class="col-lg-2 control-label" for="parent-id">
+            父链接
+          </label>
 
-        <div class="col-lg-4">
-          <p class="form-control-static"><?= $link->getParentLink()->get('name') ?></p>
-          <input type="hidden" id="parentId" name="parentId">
+          <div class="col-lg-4">
+            <p class="form-control-static"><?= $link->getParentLink()->get('name') ?></p>
+            <input type="hidden" id="parent-id" name="parentId">
+          </div>
         </div>
-      </div>
       <?php endif ?>
 
       <div class="js-group-type form-group display-none">
@@ -73,6 +73,7 @@
             <label class="col-lg-2 control-label" for="image">
               初始状态的图片
             </label>
+
             <div class="col-lg-4">
               <div class="input-group">
                 <input type="text" class="form-control" id="image" name="image">
@@ -90,12 +91,13 @@
           </div>
 
           <div class="js-group-icon js-icon-image form-group display-none">
-            <label class="col-lg-2 control-label" for="activeImage">
+            <label class="col-lg-2 control-label" for="active-image">
               被激活时的图片
             </label>
+
             <div class="col-lg-4">
               <div class="input-group">
-                <input type="text" class="form-control" id="activeImage" name="activeImage">
+                <input type="text" class="form-control" id="active-image" name="activeImage">
                 <span class="input-group-btn">
                     <button id="select-thumb" class="btn btn-white" type="button">
                       <i class="fa fa-picture-o"></i>
@@ -104,7 +106,7 @@
                 </span>
               </div>
             </div>
-            <label class="col-lg-6 help-text" for="activeImage">
+            <label class="col-lg-6 help-text" for="active-image">
               高度和宽度1:1
             </label>
           </div>
@@ -121,24 +123,24 @@
           </div>
 
           <div class="js-group-icon js-icon-custom-font form-group display-none">
-            <label class="col-lg-2 control-label" for="customFont">
+            <label class="col-lg-2 control-label" for="custom-font">
               自定义图标
             </label>
 
             <div class="col-lg-4">
-              <input type="text" class="form-control" name="customFont" id="customFont">
+              <input type="text" class="form-control" name="customFont" id="custom-font">
             </div>
 
-            <label class="col-lg-6 help-text" for="customFont">
+            <label class="col-lg-6 help-text" for="custom-font">
               支持<a href="http://www.iconfont.cn/" target="_blank">iconfont</a>,如需使用,请联系开发人员
             </label>
           </div>
 
           <div class="js-group-bg-color form-group display-none">
-            <label for="bgColor" class="col-sm-2 control-label">背景颜色</label>
+            <label for="bg-color" class="col-sm-2 control-label">背景颜色</label>
 
             <div class="col-sm-4">
-              <input type="text" class="js-bg-color form-control" name="bgColor" id="bgColor">
+              <input type="text" class="js-bg-color form-control" name="bgColor" id="bg-color">
             </div>
           </div>
 
@@ -203,7 +205,7 @@
       </div>
 
       <input type="hidden" name="id" id="id">
-      <input type="hidden" name="navId" id="navId">
+      <input type="hidden" name="navId" id="nav-id">
 
       <div class="clearfix form-actions form-group">
         <div class="col-lg-offset-2">
@@ -238,11 +240,11 @@
     });
 
     var link = <?= $link->toJson() ?>;
-
-    $('#linksForm')
+    var navId = <?= $link['navId'] ?: (int) $req['navId'] ?>;
+    $('#links-form')
       .loadJSON(link)
       .ajaxForm({
-        url: $.url('admin/navs/%s/links?_method=' + (link.id ? 'put' : 'post'), <?= $link['navId'] ?: (int) $req['navId'] ?>),
+        url: $.url('admin/navs/%s/links?_method=' + (link.id ? 'put' : 'post'), navId),
         dataType: 'json',
         beforeSubmit: function (arr, $form, options) {
           return $form.valid();
@@ -260,23 +262,25 @@
     $('.js-bg-color').spectrum();
 
     // 选择类型
-    function changeType () {
+    function changeType() {
       if ($('.js-type:checked').val() == '1') {
         $('.js-links-group').show();
       } else {
         $('.js-links-group').hide();
       }
     }
+
     $('.js-type').change(changeType);
     changeType();
 
     // 选择图标
-    function changeIcon () {
+    function changeIcon() {
       $('.js-group-icon').hide();
-      if($('.js-group-icons').css("display") !='none') {
+      if ($('.js-group-icons').css("display") != 'none') {
         $('.js-icon-' + $('.js-icon:checked').val()).show();
       }
     }
+
     $('.js-icon').change(changeIcon);
     changeIcon();
 
@@ -306,7 +310,7 @@
       searchText: '搜索',
       selectedClass: 'btn-success',
       unselectedClass: 'btn-white'
-    }).on('change', function(e) {
+    }).on('change', function (e) {
       $('#font').val(e.icon);
     });
 
@@ -327,7 +331,7 @@
     });
 
     $('#image').imageInput();
-    $('#activeImage').imageInput();
+    $('#active-image').imageInput();
   });
 </script>
 <?= $block->end() ?>

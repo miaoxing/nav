@@ -8,9 +8,13 @@
           <?php if ($link['icon'] == 'image') : ?>
             <img class="list-icon" src="<?= $link['image'] ?>">
           <?php elseif ($link['icon'] == 'font') : ?>
-            <i class="list-icon <?= $link['font'] ?>" style="<?= $link['bgColor'] ? ('background-color:' . $link['bgColor']) : '' ?>"></i>
+            <i class="list-icon <?= $link['font'] ?>"
+              style="<?= $link['bgColor'] ? ('background-color:' . $link['bgColor']) : '' ?>">
+            </i>
           <?php else : ?>
-            <i class="list-icon iconfont" style="<?= $link['bgColor'] ? ('background-color:' . $link['bgColor']) : '' ?>"><?= $link['customFont'] ?></i>
+            <i class="list-icon iconfont"
+              style="<?= $link['bgColor'] ? ('background-color:' . $link['bgColor']) : '' ?>">
+              <?= $link['customFont'] ?></i>
           <?php endif ?>
         </div>
         <div class="list-col list-middle">

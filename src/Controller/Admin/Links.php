@@ -57,14 +57,11 @@ class Links extends \miaoxing\plugin\BaseController
                     'records' => $links->count(),
                 ]);
 
-                break;
-
             default:
                 $types = wei()->nav->getTypes();
                 $type = $types[$nav['type']];
 
                 return get_defined_vars();
-                break;
         }
     }
 

@@ -43,11 +43,8 @@ class Navs extends \miaoxing\plugin\BaseController
                     'records' => count($data),
                 ]);
 
-                break;
-
             default:
                 return get_defined_vars();
-                break;
         }
     }
 

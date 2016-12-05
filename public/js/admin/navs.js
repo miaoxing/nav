@@ -1,6 +1,6 @@
 define([], function () {
   var Navs = function () {
-
+    // do something
   };
 
   $.extend(Navs.prototype, {
@@ -10,7 +10,6 @@ define([], function () {
       return this.$el.find(selector);
     },
     edit: function (options) {
-      var self = this;
       $.extend(this, options);
 
       this.$el
@@ -18,7 +17,7 @@ define([], function () {
         .ajaxForm({
           url: $.url('admin/navs?_method=' + (this.data.id ? 'put' : 'post')),
           dataType: 'json',
-          beforeSubmit: function (arr, $form, options) {
+          beforeSubmit: function (arr, $form) {
             return $form.valid();
           },
           success: function (ret) {

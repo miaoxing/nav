@@ -1,13 +1,11 @@
-@font-face {font-family: "nav-iconfont";
-  src: url('//at.alicdn.com/t/font_1443712623_5761075.eot'); /* IE9*/
-  src: url('//at.alicdn.com/t/font_1443712623_5761075.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('//at.alicdn.com/t/font_1443712623_5761075.woff') format('woff'), /* chrome、firefox */
-  url('//at.alicdn.com/t/font_1443712623_5761075.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-  url('//at.alicdn.com/t/font_1443712623_5761075.svg#iconfont') format('svg'); /* iOS 4.1- */
+@font-face {
+  font-family: "nav-iconfont";
+  src: url('//at.alicdn.com/t/font_1443712623_5761075.eot'); /* IE9 */
+  src: url('//at.alicdn.com/t/font_1443712623_5761075.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('//at.alicdn.com/t/font_1443712623_5761075.woff') format('woff'), /* chrome、firefox */ url('//at.alicdn.com/t/font_1443712623_5761075.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */ url('//at.alicdn.com/t/font_1443712623_5761075.svg#iconfont') format('svg'); /* iOS 4.1- */
 }
 
 .ni {
-  font-family:"nav-iconfont" !important;
+  font-family: "nav-iconfont";
   font-style: normal;
   font-weight: normal;
   -webkit-font-smoothing: antialiased;
@@ -15,23 +13,82 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.ni-phone:before { content: "\e613"; }
-.ni-list:before { content: "\e602"; }
-.ni-marker:before { content: "\e618"; }
-.ni-list-3:before { content: "\e601"; }
-.ni-gear:before { content: "\e61b"; }
-.ni-left:before { content: "\e615"; }
-.ni-home:before { content: "\e604"; }
-.ni-cart:before { content: "\e606"; }
-.ni-coins:before { content: "\e61f"; }
-.ni-wallet:before { content: "\e603"; }
-.ni-dist:before { content: "\e622"; }
-.ni-list-4:before { content: "\e60c"; }
-.ni-list-search:before { content: "\e610"; }
-.ni-user:before { content: "\e632"; }
-.ni-users:before { content: "\e62b"; }
-.ni-question:before { content: "\e62c"; }
-.ni-gift:before { content: "\e62f"; }
-.ni-coupon:before { content: "\e62d"; }
-.ni-list-2:before { content: "\e62e"; }
-.ni-search:before { content: "\e617"; }
+.ni-phone::before {
+  content: "\e613";
+}
+
+.ni-list::before {
+  content: "\e602";
+}
+
+.ni-marker::before {
+  content: "\e618";
+}
+
+.ni-list-3::before {
+  content: "\e601";
+}
+
+.ni-gear::before {
+  content: "\e61b";
+}
+
+.ni-left::before {
+  content: "\e615";
+}
+
+.ni-home::before {
+  content: "\e604";
+}
+
+.ni-cart::before {
+  content: "\e606";
+}
+
+.ni-coins::before {
+  content: "\e61f";
+}
+
+.ni-wallet::before {
+  content: "\e603";
+}
+
+.ni-dist::before {
+  content: "\e622";
+}
+
+.ni-list-4::before {
+  content: "\e60c";
+}
+
+.ni-list-search::before {
+  content: "\e610";
+}
+
+.ni-user::before {
+  content: "\e632";
+}
+
+.ni-users::before {
+  content: "\e62b";
+}
+
+.ni-question::before {
+  content: "\e62c";
+}
+
+.ni-gift::before {
+  content: "\e62f";
+}
+
+.ni-coupon::before {
+  content: "\e62d";
+}
+
+.ni-list-2::before {
+  content: "\e62e";
+}
+
+.ni-search::before {
+  content: "\e617";
+}

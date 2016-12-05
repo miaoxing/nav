@@ -50,7 +50,6 @@
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
-  box-align: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
@@ -80,7 +79,6 @@
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
-  box-align: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
@@ -128,7 +126,7 @@ img.hm-nav-icon {
   display: block;
   padding: 2px 10px;
   border-top: 1px solid rgba(255, 255, 255, 0.15);
-  color: #fff !important;
+  color: #fff;
   text-decoration: none;
   text-shadow: none;
   font-size: 14px;
@@ -142,7 +140,7 @@ img.hm-nav-icon {
   text-decoration: none;
 }
 
-.hm-nav:before, .hm-nav:after {
+.hm-nav::before, .hm-nav::after {
   display: none;
 }
 

@@ -1,6 +1,7 @@
 <?php
 
 namespace plugins\nav\docs {
+
     /**
      * @property    \Miaoxing\Nav\Service\Nav $nav 编辑器导航组件
      * @method      \Miaoxing\Nav\Service\Nav|\Miaoxing\Nav\Service\Nav[] nav()
@@ -14,6 +15,7 @@ namespace plugins\nav\docs {
 }
 
 namespace {
+
     /**
      * @return \plugins\nav\docs\AutoComplete
      */

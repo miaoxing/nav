@@ -1,3 +1,4 @@
+<?= $block('css') ?>
 <style>
   #hm-nav-<?= $nav['id'] ?> {
     background-color: <?= $nav['bgColor'] ?>;
@@ -7,6 +8,7 @@
     color: <?= $nav['color'] ?> !important; /* jqm */
   }
 </style>
+<?= $block->end() ?>
 
 <nav class="hm-nav" id="hm-nav-<?= $nav['id'] ?>">
   <div class="hm-nav-left"><?= $leftLinks ?></div>
