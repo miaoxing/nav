@@ -1,4 +1,3 @@
-<?= $block('css') ?>
 <!-- htmllint tag-bans="false" -->
 <style>
   body, .ui-page {
@@ -21,7 +20,6 @@
   }
 </style>
 <!-- htmllint tag-bans="$previous" -->
-<?= $block->end() ?>
 
 <nav class="nav-footer border-top flex flex-center">
   <?php foreach ($links as $link) : ?>

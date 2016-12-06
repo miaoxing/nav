@@ -1,4 +1,3 @@
-<?= $block('css') ?>
 <!-- htmllint tag-bans="false" -->
 <style>
   <?php foreach ($links as $i => $link) : ?>
@@ -8,7 +7,6 @@
   <?php endforeach; ?>
 </style>
 <!-- htmllint tag-bans="$previous" -->
-<?= $block->end() ?>
 
 <!-- htmllint preset="none" -->
 <!-- htmllint tag-name-match="false" -->

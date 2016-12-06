@@ -1,5 +1,4 @@
 <?php $nav = wei()->nav()->curApp()->enabled()->find(['type' => 'word']); ?>
-<?= $block('css') ?>
 <!-- htmllint tag-bans="false" -->
 <style type="text/css">
   .nav-word {
@@ -54,7 +53,6 @@
   }
 </style>
 <!-- htmllint tag-bans="$previous" -->
-<?= $block->end() ?>
 
 <?php $links = $nav ? $nav->getLinks() : ''; ?>
 <?php if ($links && $links->count() > 0) : ?>

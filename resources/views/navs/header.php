@@ -1,4 +1,3 @@
-<?= $block('css') ?>
 <!-- htmllint tag-bans="false" -->
 <style>
   #hm-nav-<?= $nav['id'] ?> {
@@ -10,7 +9,6 @@
   }
 </style>
 <!-- htmllint tag-bans="$previous" -->
-<?= $block->end() ?>
 
 <nav class="hm-nav" id="hm-nav-<?= $nav['id'] ?>">
   <div class="hm-nav-left"><?= $leftLinks ?></div>
