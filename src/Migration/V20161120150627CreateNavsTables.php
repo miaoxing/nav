@@ -11,7 +11,7 @@ class V20161120150627CreateNavsTables extends BaseMigration
      */
     public function up()
     {
-        $this->scheme->table('navs')
+        $this->schema->table('navs')
             ->id()
             ->int('appId')
             ->string('type', 16)->comment('导航的类型')
@@ -27,7 +27,7 @@ class V20161120150627CreateNavsTables extends BaseMigration
             ->int('updateUser')
             ->exec();
 
-        $this->scheme->table('navLinks')
+        $this->schema->table('navLinks')
             ->id()
             ->int('navId')
             ->int('parentId')->comment('父链接编号')
@@ -54,7 +54,7 @@ class V20161120150627CreateNavsTables extends BaseMigration
      */
     public function down()
     {
-        $this->scheme->dropIfExists('navs');
-        $this->scheme->dropIfExists('navLinks');
+        $this->schema->dropIfExists('navs');
+        $this->schema->dropIfExists('navLinks');
     }
 }
