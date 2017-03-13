@@ -22,7 +22,7 @@ class V20161120150627CreateNavsTables extends BaseMigration
             ->string('activeColor', 8)->comment('激活时的颜色')
             ->string('display')->comment('显示图标的类型')
             ->bool('enable')->defaults(1)->comment('是否启用')
-            ->timestamps()
+            ->timestampsV1()
             ->int('createUser')
             ->int('updateUser')
             ->exec();
@@ -43,7 +43,7 @@ class V20161120150627CreateNavsTables extends BaseMigration
             ->text('linkTo')
             ->smallInt('sort', 6)->comment('顺序')
             ->text('description')->comment('描述')
-            ->timestamps()
+            ->timestampsV1()
             ->int('createUser')
             ->int('updateUser')
             ->exec();
