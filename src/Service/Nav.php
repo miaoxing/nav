@@ -136,7 +136,7 @@ class Nav extends \miaoxing\plugin\BaseModel
         /** @var NavLink $link */
         foreach ($links as $link) {
             $url = $link['subLinks'] ? 'javascript:;' : $this->linkTo->getUrl($link['linkTo']);
-            $html .= '<a href="' . $url . '" class="hm-nav-link flex flex-center">';
+            $html .= '<a href="' . $url . '" class="js-header-nav-item hm-nav-link flex flex-center">';
 
             // 显示图标
             if ($navLink->displayIcon($link)) {
