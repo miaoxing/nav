@@ -2,7 +2,7 @@
 
 namespace Miaoxing\Nav\Controller\Admin;
 
-class Navs extends \miaoxing\plugin\BaseController
+class Navs extends \Miaoxing\Plugin\BaseController
 {
     protected $controllerName = '导航管理';
 
