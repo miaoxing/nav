@@ -2,7 +2,7 @@
 
 namespace Miaoxing\Nav\Service;
 
-class NavLink extends \miaoxing\plugin\BaseModel
+class NavLink extends \Miaoxing\Plugin\BaseModel
 {
     const TYPE_LINK = 1;
 
