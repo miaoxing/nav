@@ -24,7 +24,7 @@ class Plugin extends \Miaoxing\Plugin\BasePlugin
         $this->view->display('@nav/nav/style.php');
     }
 
-    public function onBeforeContent($pageConfig, $title)
+    public function onBodyStart($pageConfig, $title)
     {
         wei()->nav->display($pageConfig, $title);
     }
