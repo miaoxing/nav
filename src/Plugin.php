@@ -21,7 +21,9 @@ class Plugin extends \Miaoxing\Plugin\BasePlugin
 
     public function onStyle()
     {
-        $this->view->display('@nav/nav/style.php');
+        if (!$this->app->isAdmin()) {
+            $this->view->display('@nav/nav/style.php');
+        }
     }
 
     public function onBodyStart($pageConfig, $title)
