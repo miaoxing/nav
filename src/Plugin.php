@@ -24,7 +24,7 @@ class Plugin extends \Miaoxing\Plugin\BasePlugin
         $this->view->display('nav:navs/prePageCss.php');
     }
 
-    public function onPreContent($pageConfig, $title)
+    public function onBeforeContent($pageConfig, $title)
     {
         wei()->nav->display($pageConfig, $title);
     }
