@@ -19,9 +19,9 @@ class Plugin extends \Miaoxing\Plugin\BasePlugin
         ];
     }
 
-    public function onPrePageCss()
+    public function onStyle()
     {
-        $this->view->display('nav:navs/prePageCss.php');
+        $this->view->display('@nav/nav/style.php');
     }
 
     public function onBeforeContent($pageConfig, $title)
