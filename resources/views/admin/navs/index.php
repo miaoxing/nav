@@ -31,7 +31,7 @@
 </div>
 <!-- /row -->
 
-<?= $block('js') ?>
+<?= $block->js() ?>
 <script>
   require(['dataTable', 'form', 'jquery-deparam'], function () {
     var recordTable = $('#nav-table').dataTable({

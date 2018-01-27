@@ -71,7 +71,7 @@
   </div>
 <?php endif; ?>
 
-<?= $block('js') ?>
+<?= $block->js() ?>
 <script>
   require(['comps/superSlide/jquery.SuperSlide.2.1.1'], function (linkTo) {
     $(".js-txt-marquee").slide({

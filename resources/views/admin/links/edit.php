@@ -224,7 +224,7 @@
   </div>
 </div>
 
-<?= $block('js') ?>
+<?= $block->js() ?>
 <script>
   require(['linkTo', 'validator', 'form',
     'ueditor',

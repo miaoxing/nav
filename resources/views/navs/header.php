@@ -16,7 +16,7 @@
   <div class="hm-nav-right"><?= $rightLinks ?></div>
 </nav>
 
-<?= $block('js') ?>
+<?= $block->js() ?>
 <script>
   (function () {
     $('.hm-nav-link').click(function (e) {

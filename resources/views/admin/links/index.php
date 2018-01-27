@@ -44,7 +44,7 @@
 
 <?php require $view->getFile('@link-to/link-to/link-to.php') ?>
 
-<?= $block('js') ?>
+<?= $block->js() ?>
 <script>
   require(['linkTo', 'dataTable', 'form', 'jquery-deparam'], function (linkTo) {
     var recordTable = $('#nav-table').dataTable({

@@ -53,7 +53,7 @@
   </div>
 </div>
 
-<?= $block('js') ?>
+<?= $block->js() ?>
 <script>
   require([
     'plugins/nav/js/admin/navs',
