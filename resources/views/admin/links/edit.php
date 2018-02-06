@@ -75,15 +75,7 @@
             </label>
 
             <div class="col-lg-4">
-              <div class="input-group">
-                <input type="text" class="form-control" id="image" name="image">
-                <span class="input-group-btn">
-                    <button class="btn btn-white" type="button">
-                      <i class="fa fa-picture-o"></i>
-                      选择图片
-                    </button>
-                </span>
-              </div>
+              <input type="text" class="form-control" id="image" name="image">
             </div>
             <label class="col-lg-6 help-text" for="image">
               高度和宽度1:1
@@ -96,15 +88,7 @@
             </label>
 
             <div class="col-lg-4">
-              <div class="input-group">
-                <input type="text" class="form-control" id="active-image" name="activeImage">
-                <span class="input-group-btn">
-                    <button class="btn btn-white" type="button">
-                      <i class="fa fa-picture-o"></i>
-                      选择图片
-                    </button>
-                </span>
-              </div>
+              <input type="text" class="form-control" id="active-image" name="activeImage">
             </div>
             <label class="col-lg-6 help-text" for="active-image">
               高度和宽度1:1
@@ -231,7 +215,8 @@
     'assets/spectrum',
     'comps/bootstrap-iconpicker/bootstrap-iconpicker/js/bootstrap-iconpicker.min',
     'css!comps/bootstrap-iconpicker/bootstrap-iconpicker/css/bootstrap-iconpicker.min',
-    'css!plugins/nav/css/fonts'
+    'css!plugins/nav/css/fonts',
+    'plugins/admin/js/image-upload'
   ], function (linkTo) {
     // 显示支持的输入框
     var supports = <?= json_encode($type['supports']) ?>;
@@ -330,8 +315,8 @@
       }
     });
 
-    $('#image').imageInput();
-    $('#active-image').imageInput();
+    $('#image').imageUpload();
+    $('#active-image').imageUpload();
   });
 </script>
 <?= $block->end() ?>
