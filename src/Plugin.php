@@ -2,7 +2,13 @@
 
 namespace Miaoxing\Nav;
 
-class Plugin extends \Miaoxing\Plugin\BasePlugin
+use Miaoxing\Plugin\BasePlugin;
+use Miaoxing\Plugin\Service\Layout;
+
+/**
+ * @property Layout $layout
+ */
+class Plugin extends BasePlugin
 {
     protected $name = '导航';
 
@@ -28,9 +34,11 @@ class Plugin extends \Miaoxing\Plugin\BasePlugin
 
     public function onBodyStart($title)
     {
+        $title || $title = $this->layout->getHeaderTitle();
+
         wei()->nav->display([
-            'displayHeader' => wei()->layout->getHeader(),
-            'displayFooter' => wei()->layout->getFooter(),
+            'displayHeader' => $this->layout->getHeader(),
+            'displayFooter' => $this->layout->getFooter(),
         ], $title);
     }
 
