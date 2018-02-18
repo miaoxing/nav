@@ -3,10 +3,10 @@
 namespace Miaoxing\Nav;
 
 use Miaoxing\Plugin\BasePlugin;
-use Miaoxing\Plugin\Service\Layout;
+use Miaoxing\Plugin\Service\Page;
 
 /**
- * @property Layout $layout
+ * @property Page $page
  */
 class Plugin extends BasePlugin
 {
@@ -34,11 +34,11 @@ class Plugin extends BasePlugin
 
     public function onBodyStart($title)
     {
-        $title || $title = $this->layout->getHeaderTitle();
+        $title || $title = $this->page->getHeaderTitle();
 
         wei()->nav->display([
-            'displayHeader' => $this->layout->getHeader(),
-            'displayFooter' => $this->layout->getFooter(),
+            'displayHeader' => $this->page->getHeader(),
+            'displayFooter' => $this->page->getFooter(),
         ], $title);
     }
 
