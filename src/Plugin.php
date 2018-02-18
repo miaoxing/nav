@@ -26,9 +26,12 @@ class Plugin extends \Miaoxing\Plugin\BasePlugin
         }
     }
 
-    public function onBodyStart($pageConfig, $title)
+    public function onBodyStart($title)
     {
-        wei()->nav->display($pageConfig, $title);
+        wei()->nav->display([
+            'displayHeader' => wei()->layout->getHeader(),
+            'displayFooter' => wei()->layout->getFooter(),
+        ], $title);
     }
 
     public function onNavGetTypes(&$types)
