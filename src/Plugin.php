@@ -37,8 +37,8 @@ class Plugin extends BasePlugin
         $title || $title = $this->page->getHeaderTitle();
 
         wei()->nav->display([
-            'displayHeader' => $this->page->getHeader(),
-            'displayFooter' => $this->page->getFooter(),
+            'displayHeader' => $this->page->hasHeader(),
+            'displayFooter' => $this->page->hasFooter(),
         ], $title);
     }
 
