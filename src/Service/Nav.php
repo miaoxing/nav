@@ -11,8 +11,8 @@ class Nav extends \Miaoxing\Plugin\BaseModel
 {
     protected $data = [
         'position' => 'bottom',
-        'color' => '#fff',
-        'bgColor' => '#449d44',
+        'color' => '#333',
+        'bgColor' => '#ff',
         'display' => 'all',
     ];
 
