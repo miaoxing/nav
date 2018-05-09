@@ -15,6 +15,7 @@
   .nav-footer a.active {
     color: <?= $nav['activeColor'] ?: $nav['color'] ?> !important;
   }
+  .cart-footer-bar,
   .snap-drawer, .snap-content {
     bottom: 50px; /* TODO */
   }
