@@ -229,15 +229,44 @@ class Nav extends \Miaoxing\Plugin\BaseModel
     public function displayFooter(array $nav)
     {
         $links = [];
+        $matched = false;
         foreach ($nav['links'] as $link) {
+            $url = $this->linkTo->getUrl($link['linkTo']);
+            $isMatch = $matched ? false : $this->isMatch($url);
             $links[] = $link + [
-                    'url' => $this->linkTo->getUrl($link['linkTo']),
+                    'url' => $url,
+                    'isMatch' => $isMatch,
                 ];
         }
 
-        // 获取当前地址,用于高亮导航项
-        $curPath = $this->request->getBaseUrl() . $this->request->getPathInfo();
         $this->view->display('nav:navs/footer.php', get_defined_vars());
+    }
+
+    public function isMatch($url)
+    {
+        // 1. 匹配完整的地址
+        $curPath = $this->request->getBaseUrl() . $this->request->getPathInfo();
+        if ($curPath == $url) {
+            return true;
+        }
+
+        // TODO 还需支持域名匹配
+        // 2. 匹配查询参数
+        $parts = parse_url($url);
+        if ($parts['path'] !== $curPath) {
+            return false;
+        }
+
+        parse_str($parts['query'], $queries);
+        if (!$queries) {
+            return false;
+        }
+
+        if (count(array_intersect($queries, $this->request->getQueries())) === count($queries)) {
+            return true;
+        }
+
+        return false;
     }
 
     /**

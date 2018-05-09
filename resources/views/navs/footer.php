@@ -23,9 +23,8 @@
 
 <nav class="nav-footer border-top flex flex-center">
   <?php foreach ($links as $link) : ?>
-    <?php $isMatch = $curPath == $link['url'] || wei()->urlMapper->matchMap($link['url'], $curPath); ?>
-    <a class="js-nav-footer-item <?= $isMatch ? 'active' : '' ?>" href="<?= $link['url'] ?>">
-      <?php if ($link['icon'] == 'image' && $isMatch) : ?>
+    <a class="js-nav-footer-item <?= $link['isMatch'] ? 'active' : '' ?>" href="<?= $link['url'] ?>">
+      <?php if ($link['icon'] == 'image' && $link['isMatch']) : ?>
         <img class="nav-footer-icon" src="<?= $link['activeImage'] ?>">
       <?php elseif ($link['icon'] == 'image') : ?>
         <img class="nav-footer-icon" src="<?= $link['image'] ?>">
