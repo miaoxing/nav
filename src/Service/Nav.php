@@ -250,6 +250,12 @@ class Nav extends \Miaoxing\Plugin\BaseModel
             return true;
         }
 
+        // TODO 移除该兼容
+        $match = wei()->urlMapper->matchMap($url, $curPath);
+        if ($match) {
+            return true;
+        }
+
         // TODO 还需支持域名匹配
         // 2. 匹配查询参数
         $parts = parse_url($url);
