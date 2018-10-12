@@ -201,7 +201,7 @@ class Nav extends \Miaoxing\Plugin\BaseModel
     public function displayLink(Nav $nav)
     {
         $links = $nav->getLinks();
-        $this->view->display('nav:navs/link.php', ['links' => $links]);
+        $this->view->display('@nav/navs/link.php', ['links' => $links]);
     }
 
     /**
@@ -213,7 +213,7 @@ class Nav extends \Miaoxing\Plugin\BaseModel
     public function displayHeader(array $nav, $title = null)
     {
         $links = $this->groupBySide($nav['links']);
-        $this->view->display('nav:navs/header.php', [
+        $this->view->display('@nav/navs/header.php', [
             'nav' => $nav,
             'title' => $title,
             'leftLinks' => $this->renderLinks($links['left']),
@@ -239,7 +239,7 @@ class Nav extends \Miaoxing\Plugin\BaseModel
                 ];
         }
 
-        $this->view->display('nav:navs/footer.php', get_defined_vars());
+        $this->view->display('@nav/navs/footer.php', get_defined_vars());
     }
 
     public function isMatch($url)
