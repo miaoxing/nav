@@ -28,7 +28,7 @@
       <?php if ($link['icon'] == 'image' && $link['isMatch']) : ?>
         <img class="nav-footer-icon" src="<?= $link['activeImage'] ?>">
       <?php elseif ($link['icon'] == 'image') : ?>
-        <img class="nav-footer-icon" src="<?= $link['image'] ?>">
+        <img class="nav-footer-icon" src="<?= wei()->asset->thumb($link['image'], 72) ?>">
       <?php elseif ($link['icon'] == 'font') : ?>
         <i class="nav-footer-icon <?= $link['font'] ?>"></i>
       <?php else : ?>
