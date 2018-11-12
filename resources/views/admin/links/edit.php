@@ -215,7 +215,7 @@
     'assets/spectrum',
     'comps/bootstrap-iconpicker/bootstrap-iconpicker/js/bootstrap-iconpicker.min',
     'css!comps/bootstrap-iconpicker/bootstrap-iconpicker/css/bootstrap-iconpicker.min',
-    'css!plugins/nav/css/fonts',
+    'css!plugins/nav/css/navs',
     'plugins/admin/js/image-upload'
   ], function (linkTo) {
     // 显示支持的输入框
