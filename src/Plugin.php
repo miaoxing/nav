@@ -32,9 +32,9 @@ class Plugin extends BasePlugin
         }
     }
 
-    public function onBodyStart($title)
+    public function onBodyStart()
     {
-        $title || $title = $this->page->getHeaderTitle();
+        $title = $this->page->getHeaderTitle();
 
         wei()->nav->display([
             'displayHeader' => $this->page->hasHeader(),
