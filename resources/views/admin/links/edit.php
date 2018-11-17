@@ -101,7 +101,7 @@
             </label>
 
             <div class="col-lg-4">
-              <button class="btn btn-white" type="button" id="icon-picker"></button>
+              <button class="btn btn-default" type="button" id="icon-picker"></button>
               <input type="hidden" class="form-control" name="font" id="font">
             </div>
           </div>
@@ -271,7 +271,7 @@
 
     // 图标选择器
     $('#icon-picker').iconpicker({
-      arrowClass: 'btn-white',
+      arrowClass: 'btn-default',
       arrowPrevIconClass: 'fa fa-angle-left',
       arrowNextIconClass: 'fa fa-angle-right',
       cols: 5,
@@ -294,7 +294,7 @@
       search: false,
       searchText: '搜索',
       selectedClass: 'btn-success',
-      unselectedClass: 'btn-white'
+      unselectedClass: 'btn-default'
     }).on('change', function (e) {
       $('#font').val(e.icon);
     });

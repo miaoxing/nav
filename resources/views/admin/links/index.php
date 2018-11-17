@@ -3,7 +3,7 @@
 <div class="page-header">
   <div class="pull-right">
     <a class="btn btn-success" href="<?= $url('admin/navs/%s/links/new', $req['navId']) ?>">添加链接</a>
-    <a class="btn btn-white" href="<?= $url('admin/navs') ?>">返回导航列表</a>
+    <a class="btn btn-default" href="<?= $url('admin/navs') ?>">返回导航列表</a>
   </div>
   <h1>
     导航管理
