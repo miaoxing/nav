@@ -19,7 +19,7 @@
 <?= $block->js() ?>
 <script>
   (function () {
-    $('.hm-nav-link').click(function (e) {
+    typeof $ !== 'undefined' && $('.hm-nav-link').click(function (e) {
       var next = $(this).next();
       if (next.hasClass('hm-nav-menu')) {
         next.toggle();
