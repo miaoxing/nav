@@ -32,7 +32,7 @@
       <?php elseif ($link['icon'] == 'font') : ?>
         <i class="nav-footer-icon <?= $link['font'] ?>"></i>
       <?php else : ?>
-        <i class="nav-footer-icon iconfont"><?= $link['customFont'] ?></i>
+        <i class="nav-footer-icon iconfont <?= $link['customFont'] ?>"></i>
       <?php endif ?>
       <?= $link['name'] ?>
     </a>
