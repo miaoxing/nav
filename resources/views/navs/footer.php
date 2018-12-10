@@ -9,10 +9,10 @@
   .nav-footer > a {
     color: <?= $nav['color'] ?> !important;
   }
-  .nav-footer > a:active {
-    color: <?= $nav['activeColor'] ?: $nav['color'] ?> !important;
-  }
-  .nav-footer a.active {
+  .nav-footer > a:active,
+  .nav-footer a.active,
+  .nav-footer > a:active i,
+  .nav-footer > a.active i {
     color: <?= $nav['activeColor'] ?: $nav['color'] ?> !important;
   }
   .cart-footer-bar,
