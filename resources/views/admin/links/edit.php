@@ -310,8 +310,7 @@
         mall: true,
         act: true,
         browser: true,
-        tel: true,
-        decorator: true
+        tel: true
       }
     });
 
