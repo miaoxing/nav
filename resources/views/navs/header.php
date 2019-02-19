@@ -5,7 +5,7 @@
   }
 
   #hm-nav-<?= $nav['id'] ?>, #hm-nav-<?= $nav['id'] ?> a {
-    color: <?= $nav['color'] ?> !important; /* jqm */
+    color: <?= $nav['color'] ?>
   }
 </style>
 <!-- htmllint tag-bans="$previous" -->

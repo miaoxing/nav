@@ -39,7 +39,6 @@
   -webkit-box-align: center;
   -webkit-align-items: center;
   align-items: center;
-  font-weight: normal; /* jqm */
   text-shadow: none;
 }
 
@@ -166,7 +165,6 @@ img.hm-nav-icon {
   -webkit-flex-grow: 1;
   flex-grow: 1;
   display: block;
-  box-sizing: border-box; /* jqm */
   text-decoration: none;
   font-weight: normal;
   text-shadow: none;
