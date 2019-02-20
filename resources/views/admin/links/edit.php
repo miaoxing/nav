@@ -210,7 +210,7 @@
 
 <?= $block->js() ?>
 <script>
-  require(['linkTo', 'validator', 'form',
+  require(['linkTo', 'plugins/app/js/validation', 'form',
     'ueditor',
     'assets/spectrum',
     'comps/bootstrap-iconpicker/bootstrap-iconpicker/js/bootstrap-iconpicker.min',
