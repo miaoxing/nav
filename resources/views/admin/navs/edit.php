@@ -50,7 +50,7 @@
 <script>
   require([
     'plugins/nav/js/admin/navs',
-    'linkTo',
+    'plugins/link-to/js/link-to',
     'assets/spectrum',
     'plugins/app/js/validation',
     'form'], function (navs, linkTo) {
