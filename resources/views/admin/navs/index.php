@@ -26,7 +26,7 @@
 
 <?= $block->js() ?>
 <script>
-  require(['plugins/admin/js/data-table', 'form', 'jquery-deparam'], function () {
+  require(['plugins/admin/js/data-table', 'form', 'jquery-unparam'], function () {
     var recordTable = $('#nav-table').dataTable({
       ajax: {
         url: $.queryUrl('admin/navs.json')
