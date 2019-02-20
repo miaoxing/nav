@@ -51,7 +51,7 @@
   require([
     'plugins/nav/js/admin/navs',
     'plugins/link-to/js/link-to',
-    'assets/spectrum',
+    'plugins/admin/js/spectrum',
     'plugins/app/js/validation',
     'form'], function (navs, linkTo) {
     navs.edit({

@@ -212,7 +212,7 @@
 <script>
   require(['plugins/link-to/js/link-to', 'plugins/app/js/validation', 'form',
     'ueditor',
-    'assets/spectrum',
+    'plugins/admin/js/spectrum',
     'comps/bootstrap-iconpicker/bootstrap-iconpicker/js/bootstrap-iconpicker.min',
     'css!comps/bootstrap-iconpicker/bootstrap-iconpicker/css/bootstrap-iconpicker.min',
     'css!plugins/nav/css/navs',
