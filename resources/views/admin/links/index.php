@@ -46,7 +46,7 @@
 
 <?= $block->js() ?>
 <script>
-  require(['linkTo', 'dataTable', 'form', 'jquery-deparam'], function (linkTo) {
+  require(['linkTo', 'plugins/admin/js/data-table', 'form', 'jquery-deparam'], function (linkTo) {
     var recordTable = $('#nav-table').dataTable({
       ajax: {
         url: $.queryUrl('admin/navs/%s/links.json', '<?= (int) $req['navId'] ?>')
