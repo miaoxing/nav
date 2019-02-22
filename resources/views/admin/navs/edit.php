@@ -53,7 +53,7 @@
     'plugins/link-to/js/link-to',
     'plugins/admin/js/spectrum',
     'plugins/app/js/validation',
-    'form'], function (navs, linkTo) {
+    'plugins/admin/js/form'], function (navs, linkTo) {
     navs.edit({
       data: <?= $nav->toJson() ?>,
       linkTo: linkTo
