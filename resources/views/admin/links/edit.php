@@ -17,7 +17,7 @@
           </label>
 
           <div class="col-lg-4">
-            <p class="form-control-static"><?= $link->getParentLink()->get('name') ?></p>
+            <p class="form-control-plaintext"><?= $link->getParentLink()->get('name') ?></p>
             <input type="hidden" id="parent-id" name="parentId">
           </div>
         </div>
@@ -172,7 +172,7 @@
           </label>
 
           <div class="col-lg-4">
-            <p class="form-control-static" id="link-to"></p>
+            <p class="form-control-plaintext" id="link-to"></p>
           </div>
         </div>
       </div>
