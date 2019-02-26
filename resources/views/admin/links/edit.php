@@ -101,7 +101,7 @@
             </label>
 
             <div class="col-lg-4">
-              <button class="btn btn-default" type="button" id="icon-picker"></button>
+              <button class="btn btn-secondary" type="button" id="icon-picker"></button>
               <input type="hidden" class="form-control" name="font" id="font">
             </div>
           </div>
@@ -198,7 +198,7 @@
             提交
           </button>
           &nbsp; &nbsp; &nbsp;
-          <a class="btn btn-default" href="<?= $url('admin/navs/%s/links', $link['navId']) ?>">
+          <a class="btn btn-secondary" href="<?= $url('admin/navs/%s/links', $link['navId']) ?>">
             <i class="fa fa-undo bigger-110"></i>
             返回列表
           </a>
@@ -271,7 +271,7 @@
 
     // 图标选择器
     $('#icon-picker').iconpicker({
-      arrowClass: 'btn-default',
+      arrowClass: 'btn-secondary',
       arrowPrevIconClass: 'fa fa-angle-left',
       arrowNextIconClass: 'fa fa-angle-right',
       cols: 5,
@@ -294,7 +294,7 @@
       search: false,
       searchText: '搜索',
       selectedClass: 'btn-success',
-      unselectedClass: 'btn-default'
+      unselectedClass: 'btn-secondary'
     }).on('change', function (e) {
       $('#font').val(e.icon);
     });
