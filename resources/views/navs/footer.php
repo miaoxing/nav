@@ -22,7 +22,7 @@
 </style>
 <!-- htmllint tag-bans="$previous" -->
 
-<nav class="nav-footer border-top flex flex-center">
+<nav class="nav-footer border-top d-flex flex-center">
   <?php foreach ($links as $link) : ?>
     <a class="js-nav-footer-item <?= $link['isMatch'] ? 'active' : '' ?>" href="<?= $link['url'] ?>">
       <?php if ($link['icon'] == 'image' && $link['isMatch']) : ?>
