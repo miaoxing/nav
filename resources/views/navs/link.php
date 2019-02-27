@@ -14,7 +14,7 @@
 <ul class="list list-indented">
   <?php foreach ($links as $i => $link) : ?>
     <?php if ($link->isDivider()) : ?>
-      <li class="list-divider"></li>
+      <li class=" list-item list-item-divider"></li>
     <?php else : ?>
       <li class="list-item-link">
         <a class="js-link-nav-item list-item has-feedback" href="<?= $link->getUrl() ?>">
