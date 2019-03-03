@@ -31,7 +31,7 @@
             <?php endif ?>
           </div>
           <div class="list-col list-middle">
-            <h4 class="list-title">
+            <h4 class="list-item-title">
               <?= $link['name'] ?>
             </h4>
           </div>
