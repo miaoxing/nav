@@ -17,7 +17,7 @@
       <li class="list-item list-divider"></li>
     <?php else : ?>
       <li class="list-item-link">
-        <a class="js-link-nav-item list-item has-feedback" href="<?= $link->getUrl() ?>">
+        <a class="js-link-nav-item list-item list-has-feedback" href="<?= $link->getUrl() ?>">
           <div class="list-col list-col-icon">
             <?php if ($link['icon'] == 'image') : ?>
               <img class="list-icon <?= 'icon-bg-' . $i ?>" src="<?= $link['image'] ?>">
