@@ -17,7 +17,7 @@
       <li class="list-item list-divider"></li>
     <?php else : ?>
       <li class="list-item-link">
-        <a class="js-link-nav-item list-item list-has-feedback" href="<?= $link->getUrl() ?>">
+        <a class="js-link-nav-item list-item list-has-arrow" href="<?= $link->getUrl() ?>">
           <div class="list-col list-col-icon">
             <?php if ($link['icon'] == 'image') : ?>
               <img class="list-icon <?= 'icon-bg-' . $i ?>" src="<?= $link['image'] ?>">
@@ -35,7 +35,7 @@
               <?= $link['name'] ?>
             </h4>
           </div>
-          <i class="bm-angle-right list-feedback"></i>
+          <i class="bm-angle-right list-arrow"></i>
         </a>
       </li>
     <?php endif ?>
