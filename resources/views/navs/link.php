@@ -30,7 +30,7 @@
               </i>
             <?php endif ?>
           </div>
-          <div class="list-col list-middle">
+          <div class="list-col align-self-center">
             <h4 class="list-title">
               <?= $link['name'] ?>
             </h4>
