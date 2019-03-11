@@ -210,11 +210,14 @@
 
 <?= $block->js() ?>
 <script>
-  require(['plugins/link-to/js/link-to', 'plugins/app/js/validation', 'plugins/admin/js/form',
+  require([
+    'plugins/link-to/js/link-to',
+    'plugins/app/js/validation',
+    'plugins/admin/js/form',
     'ueditor',
     'plugins/admin/js/spectrum',
-    'comps/bootstrap-iconpicker/bootstrap-iconpicker/js/bootstrap-iconpicker.min',
-    'css!comps/bootstrap-iconpicker/bootstrap-iconpicker/css/bootstrap-iconpicker.min',
+    'plugins/nav/libs/bootstrap-iconpicker/dist/js/bootstrap-iconpicker.min',
+    'css!plugins/nav/libs/bootstrap-iconpicker/dist/css/bootstrap-iconpicker.min',
     'css!plugins/nav/css/navs',
     'plugins/admin/js/image-upload'
   ], function (linkTo) {
@@ -248,7 +251,7 @@
 
     // 选择类型
     function changeType() {
-      if ($('.js-type:checked').val() == '1') {
+      if ($('.js-type:checked').val() === '1') {
         $('.js-links-group').prop('hidden', false);
       } else {
         $('.js-links-group').prop('hidden', true);
@@ -260,8 +263,8 @@
 
     // 选择图标
     function changeIcon() {
-      $('.js-group-icon').hide();
-      if ($('.js-group-icons').prop('hidden') !== false) {
+      $('.js-group-icon').prop('hidden', true);
+      if ($('.js-group-icons').prop('hidden') === false) {
         $('.js-icon-' + $('.js-icon:checked').val()).prop('hidden', false);
       }
     }
@@ -289,12 +292,8 @@
       },
       labelHeader: '{0} / {1} 页',
       labelFooter: '{0} - {1} ，共 {2} 个图标',
-      placement: 'bottom',
-      rows: 5,
       search: false,
-      searchText: '搜索',
       selectedClass: 'btn-success',
-      unselectedClass: 'btn-secondary'
     }).on('change', function (e) {
       $('#font').val(e.icon);
     });
