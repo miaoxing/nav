@@ -23,7 +23,7 @@
         </div>
       <?php endif ?>
 
-      <div class="js-group-type form-group display-none">
+      <div class="js-group-type form-group" hidden>
         <label class="col-lg-2 control-label" for="type">
           类型
         </label>
@@ -51,7 +51,7 @@
         </div>
 
         <?php if (!$link['parentId']) : ?>
-          <div class="js-group-icons form-group display-none">
+          <div class="js-group-icons form-group" hidden>
             <label class="col-lg-2 control-label" for="icon">
               图标类型
             </label>
@@ -69,7 +69,7 @@
             </div>
           </div>
 
-          <div class="js-group-icon js-icon-image form-group display-none">
+          <div class="js-group-icon js-icon-image form-group" hidden>
             <label class="col-lg-2 control-label" for="image">
               初始状态的图片
             </label>
@@ -82,7 +82,7 @@
             </label>
           </div>
 
-          <div class="js-group-icon js-icon-image form-group display-none">
+          <div class="js-group-icon js-icon-image form-group" hidden>
             <label class="col-lg-2 control-label" for="active-image">
               被激活时的图片
             </label>
@@ -95,7 +95,7 @@
             </label>
           </div>
 
-          <div class="js-group-icon js-icon-font form-group display-none">
+          <div class="js-group-icon js-icon-font form-group" hidden>
             <label class="col-lg-2 control-label" for="font">
               系统图标
             </label>
@@ -106,7 +106,7 @@
             </div>
           </div>
 
-          <div class="js-group-icon js-icon-custom-font form-group display-none">
+          <div class="js-group-icon js-icon-custom-font form-group" hidden>
             <label class="col-lg-2 control-label" for="custom-font">
               自定义图标
             </label>
@@ -120,7 +120,7 @@
             </label>
           </div>
 
-          <div class="js-group-bg-color form-group display-none">
+          <div class="js-group-bg-color form-group" hidden>
             <label for="bg-color" class="col-sm-2 control-label">背景颜色</label>
 
             <div class="col-sm-4">
@@ -128,7 +128,7 @@
             </div>
           </div>
 
-          <div class="js-group-display form-group display-none">
+          <div class="js-group-display form-group" hidden>
             <label class="col-lg-2 control-label" for="display">
               显示
             </label>
@@ -142,7 +142,7 @@
             </div>
           </div>
 
-          <div class="js-group-description form-group display-none">
+          <div class="js-group-description form-group" hidden>
             <label class="col-lg-2 control-label" for="description">
               描述
             </label>
@@ -152,7 +152,7 @@
             </div>
           </div>
 
-          <div class="js-group-side form-group display-none">
+          <div class="js-group-side form-group" hidden>
             <label class="col-lg-2 control-label" for="side">
               位置
             </label>
@@ -221,7 +221,7 @@
     // 显示支持的输入框
     var supports = <?= json_encode($type['supports']) ?>;
     $.each(supports, function (key, field) {
-      $('.js-group-' + field).show();
+      $('.js-group-' + field).prop('hidden', false);
     });
 
     var link = <?= $link->toJson() ?>;
@@ -249,9 +249,9 @@
     // 选择类型
     function changeType() {
       if ($('.js-type:checked').val() == '1') {
-        $('.js-links-group').show();
+        $('.js-links-group').prop('hidden', false);
       } else {
-        $('.js-links-group').hide();
+        $('.js-links-group').prop('hidden', true);
       }
     }
 
@@ -261,8 +261,8 @@
     // 选择图标
     function changeIcon() {
       $('.js-group-icon').hide();
-      if ($('.js-group-icons').css("display") != 'none') {
-        $('.js-icon-' + $('.js-icon:checked').val()).show();
+      if ($('.js-group-icons').prop('hidden') !== false) {
+        $('.js-icon-' + $('.js-icon:checked').val()).prop('hidden', false);
       }
     }
 
