@@ -293,7 +293,7 @@
       labelHeader: '{0} / {1} 页',
       labelFooter: '{0} - {1} ，共 {2} 个图标',
       search: false,
-      selectedClass: 'btn-success',
+      selectedClass: 'bg-success text-white border-success',
     }).on('change', function (e) {
       $('#font').val(e.icon);
     });
