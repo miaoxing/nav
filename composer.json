@@ -3,7 +3,8 @@
   "type": "miaoxing-plugin",
   "description": "Miaoxing Nav Plugin",
   "keywords": [
-    "miaoxing", "nav"
+    "miaoxing",
+    "nav"
   ],
   "license": "MIT",
   "require": {
