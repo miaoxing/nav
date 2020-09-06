@@ -2,7 +2,7 @@
 
 namespace Miaoxing\Nav\Migration;
 
-use Miaoxing\Plugin\BaseMigration;
+use Wei\Migration\BaseMigration;
 
 class V20161120150627CreateNavsTables extends BaseMigration
 {
