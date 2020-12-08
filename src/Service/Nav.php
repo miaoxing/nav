@@ -7,7 +7,7 @@ namespace Miaoxing\Nav\Service;
  * @property \Wei\View $view $view
  * @property \Wei\Request $request
  */
-class Nav extends \Miaoxing\Plugin\BaseModel
+class Nav extends \Miaoxing\Plugin\BaseService
 {
     protected $data = [
         'position' => 'bottom',
