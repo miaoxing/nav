@@ -1,3 +1,15 @@
+## [0.1.15](https://github.com/miaoxing/nav/compare/v0.1.14...v0.1.15) (2021-05-11)
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/app:** upgrade from `0.3.0` to `0.3.1`
+* **@miaoxing/link-to:** upgrade from `0.1.14` to `0.1.15`
+* **@miaoxing/dev:** upgrade from `6.4.0` to `7.0.0`
+
 ## [0.1.14](https://github.com/miaoxing/nav/compare/v0.1.13...v0.1.14) (2021-04-27)
 
 
