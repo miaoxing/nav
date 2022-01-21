@@ -108,7 +108,7 @@ class Nav extends \Miaoxing\Plugin\BaseService
      */
     public function display($pageConfig, $title = null)
     {
-        $navs = (array) wei()->cache->get($this->getRenderCacheKey(), 86400, function () {
+        $navs = (array) wei()->cache->remember($this->getRenderCacheKey(), 86400, function () {
             return $this->getCacheData();
         });
 
