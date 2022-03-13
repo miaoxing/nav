@@ -54,7 +54,6 @@ class V20161120150627CreateNavsTables extends BaseMigration
      */
     public function down()
     {
-        $this->schema->dropIfExists('navs');
-        $this->schema->dropIfExists('navLinks');
+        $this->schema->dropIfExists(['navs', 'navLinks']);
     }
 }
