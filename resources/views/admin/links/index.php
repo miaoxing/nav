@@ -24,9 +24,9 @@
         <tr>
           <th>名称</th>
           <th>链接到</th>
-          <?php if (in_array('side', $type['supports'])) : ?>
+          <?php if (in_array('side', $type['supports'], true)) { ?>
             <th class="t-6">位置</th>
-          <?php endif ?>
+          <?php } ?>
           <th class="t-6">顺序</th>
           <th class="t-10">操作</th>
         </tr>
@@ -72,7 +72,7 @@
             return linkTo.renderLink(data, full.url);
           }
         },
-        <?php if (in_array('side', $type['supports'])) : ?>
+        <?php if (in_array('side', $type['supports'], true)) { ?>
         {
           data: 'side',
           sClass: 'text-center',
@@ -80,7 +80,7 @@
             return template.render('side-col-tpl', full);
           }
         },
-        <?php endif ?>
+        <?php } ?>
         {
           data: 'sort',
           sClass: 'text-center'
@@ -110,13 +110,13 @@
 
 <script id="table-actions" type="text/html">
   <div class="action-buttons">
-    <?php if (in_array('sub-links', $type['supports'])) : ?>
+    <?php if (in_array('sub-links', $type['supports'], true)) { ?>
       <% if (parentId == '0') { %>
       <a href="<%= $.url('admin/navs/%s/links/new', navId, {parentId: id}) %>" title="添加子链接">
         <i class="fa fa-plus bigger-130"></i>
       </a>
       <% } %>
-    <?php endif ?>
+    <?php } ?>
     <a href="<%= $.url('admin/links/%s/edit', id) %>" title="编辑">
       <i class="fa fa-edit bigger-130"></i>
     </a>

@@ -140,9 +140,9 @@ class Nav extends \Miaoxing\Plugin\BaseService
 
             // 显示图标
             if ($navLink->displayIcon($link)) {
-                if ($link['icon'] == 'image') {
+                if ('image' == $link['icon']) {
                     $html .= '<img class="hm-nav-icon" src="' . $link['image'] . '">';
-                } elseif ($link['icon'] == 'font') {
+                } elseif ('font' == $link['icon']) {
                     $html .= '<i class="hm-nav-icon ' . $link['font'] . '"></i>';
                 } else {
                     $html .= '<i class="hm-nav-icon iconfont">' . $link['customFont'] . '</i>';
@@ -198,7 +198,7 @@ class Nav extends \Miaoxing\Plugin\BaseService
      *
      * @param Nav $nav
      */
-    public function displayLink(Nav $nav)
+    public function displayLink(self $nav)
     {
         $links = $nav->getLinks();
         $this->view->display('@nav/navs/link.php', ['links' => $links]);
@@ -208,7 +208,7 @@ class Nav extends \Miaoxing\Plugin\BaseService
      * Repo: 展示头部导航
      *
      * @param array $nav
-     * @param null|string $title
+     * @param string|null $title
      */
     public function displayHeader(array $nav, $title = null)
     {

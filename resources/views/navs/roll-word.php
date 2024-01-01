@@ -55,21 +55,21 @@
 <!-- htmllint tag-bans="$previous" -->
 
 <?php $links = $nav ? $nav->getLinks() : ''; ?>
-<?php if ($links && $links->count() > 0) : ?>
+<?php if ($links && $links->count() > 0) { ?>
   <div class="txt-marquee-left nav-word js-txt-marquee">
     <div class="bd">
       <ul class="info-list">
-        <?php foreach ($links as $link) : ?>
+        <?php foreach ($links as $link) { ?>
           <li>
             <a href="<?= wei()->linkTo->getUrl($link['linkTo']) ?: 'javascript:;' ?>">
               <?= $link['description']; ?>
             </a>
           </li>
-        <?php endforeach ?>
+        <?php } ?>
       </ul>
     </div>
   </div>
-<?php endif; ?>
+<?php } ?>
 
 <?= $block->js() ?>
 <script>

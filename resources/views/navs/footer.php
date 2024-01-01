@@ -23,18 +23,18 @@
 <!-- htmllint tag-bans="$previous" -->
 
 <nav class="nav-footer border-top d-flex flex-center">
-  <?php foreach ($links as $link) : ?>
+  <?php foreach ($links as $link) { ?>
     <a class="js-nav-footer-item <?= $link['isMatch'] ? 'active' : '' ?>" href="<?= $link['url'] ?>">
-      <?php if ($link['icon'] == 'image' && $link['isMatch']) : ?>
+      <?php if ('image' == $link['icon'] && $link['isMatch']) { ?>
         <img class="nav-footer-icon" src="<?= $link['activeImage'] ?>">
-      <?php elseif ($link['icon'] == 'image') : ?>
+      <?php } elseif ('image' == $link['icon']) { ?>
         <img class="nav-footer-icon" src="<?= wei()->asset->thumb($link['image'], 72) ?>">
-      <?php elseif ($link['icon'] == 'font') : ?>
+      <?php } elseif ('font' == $link['icon']) { ?>
         <i class="nav-footer-icon <?= $link['font'] ?>"></i>
-      <?php else : ?>
+      <?php } else { ?>
         <i class="nav-footer-icon iconfont <?= $link['customFont'] ?>"></i>
-      <?php endif ?>
+      <?php } ?>
       <?= $link['name'] ?>
     </a>
-  <?php endforeach ?>
+  <?php } ?>
 </nav>

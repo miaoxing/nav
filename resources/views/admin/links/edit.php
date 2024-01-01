@@ -10,7 +10,7 @@
 <div class="row">
   <div class="col-12">
     <form class="form-horizontal" id="links-form" role="form" method="post">
-      <?php if ($link['parentId']) : ?>
+      <?php if ($link['parentId']) { ?>
         <div class="form-group">
           <label class="col-lg-2 control-label" for="parent-id">
             父链接
@@ -21,7 +21,7 @@
             <input type="hidden" id="parent-id" name="parentId">
           </div>
         </div>
-      <?php endif ?>
+      <?php } ?>
 
       <div class="js-group-type form-group" hidden>
         <label class="col-lg-2 control-label" for="type">
@@ -50,7 +50,7 @@
           </div>
         </div>
 
-        <?php if (!$link['parentId']) : ?>
+        <?php if (!$link['parentId']) { ?>
           <div class="js-group-icons form-group" hidden>
             <label class="col-lg-2 control-label" for="icon">
               图标类型
@@ -164,7 +164,7 @@
               </select>
             </div>
           </div>
-        <?php endif ?>
+        <?php } ?>
 
         <div class="form-group">
           <label class="col-lg-2 control-label" for="link-to">

@@ -4,9 +4,9 @@ namespace Miaoxing\Nav\Service;
 
 class NavLink extends \Miaoxing\Plugin\BaseService
 {
-    const TYPE_LINK = 1;
+    public const TYPE_LINK = 1;
 
-    const TYPE_DIVIDER = 2;
+    public const TYPE_DIVIDER = 2;
 
     protected $autoId = true;
 
@@ -59,14 +59,14 @@ class NavLink extends \Miaoxing\Plugin\BaseService
     {
         $link || $link = $this;
 
-        return in_array($link['display'], ['icon', 'all']);
+        return in_array($link['display'], ['icon', 'all'], true);
     }
 
     public function displayText($link)
     {
         $link || $link = $this;
 
-        return in_array($link['display'], ['text', 'all']);
+        return in_array($link['display'], ['text', 'all'], true);
     }
 
     public function afterFind()
