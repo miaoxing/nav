@@ -1,3 +1,15 @@
+## [0.1.51](https://github.com/miaoxing/nav/compare/v0.1.50...v0.1.51) (2024-03-31)
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/app:** upgrade from `0.8.2` to `0.8.3`
+* **@miaoxing/link-to:** upgrade from `0.1.50` to `0.1.51`
+* **@miaoxing/dev:** upgrade from `9.1.0` to `9.1.1`
+
 ## [0.1.50](https://github.com/miaoxing/nav/compare/v0.1.49...v0.1.50) (2024-02-29)
 
 
