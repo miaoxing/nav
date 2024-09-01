@@ -1,3 +1,20 @@
+## [0.1.57](https://github.com/miaoxing/nav/compare/v0.1.56...v0.1.57) (2024-09-01)
+
+
+### Features
+
+* 插件增加 wei 命令行入口 ([e95ba40](https://github.com/miaoxing/nav/commit/e95ba4071231f799583c9f4d703effb0ee94debc))
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/app:** upgrade from `0.10.3` to `0.10.4`
+* **@miaoxing/link-to:** upgrade from `0.1.56` to `0.1.57`
+* **@miaoxing/dev:** upgrade from `9.1.3` to `9.2.0`
+
 ## [0.1.56](https://github.com/miaoxing/nav/compare/v0.1.55...v0.1.56) (2024-08-03)
 
 
