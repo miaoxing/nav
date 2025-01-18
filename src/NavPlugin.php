@@ -8,7 +8,7 @@ use Miaoxing\Plugin\Service\Page;
 /**
  * @property Page $page
  */
-class Plugin extends BasePlugin
+class NavPlugin extends BasePlugin
 {
     protected $name = '导航';
 
