@@ -1,3 +1,19 @@
+## [0.1.63](https://github.com/miaoxing/nav/compare/v0.1.62...v0.1.63) (2025-02-02)
+
+
+### Bug Fixes
+
+* 更新插件类名为新版 ([32c5e5a](https://github.com/miaoxing/nav/commit/32c5e5a6ca20e9f22589cb09f9bf8f8d028fdd6a))
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/app:** upgrade from `0.10.9` to `0.10.10`
+* **@miaoxing/link-to:** upgrade from `0.1.62` to `0.1.63`
+
 ## [0.1.62](https://github.com/miaoxing/nav/compare/v0.1.61...v0.1.62) (2024-12-31)
 
 

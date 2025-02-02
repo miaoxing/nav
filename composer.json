@@ -8,8 +8,8 @@
   ],
   "license": "MIT",
   "require": {
-    "miaoxing/app": "^0.10.9",
-    "miaoxing/link-to": "^0.1.62"
+    "miaoxing/app": "^0.10.10",
+    "miaoxing/link-to": "^0.1.63"
   },
   "autoload": {
     "psr-4": {
